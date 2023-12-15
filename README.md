@@ -7,14 +7,14 @@ When going through the mortgage process there is that age old question on whethe
 
 Unfortunately, the most common answer among MLOs is to lock the loan as soon as possible. Some say that they lock after the loan has gone through underwriting and they know for sure that the loan is going to close. There are several services that help MLOs understand interest rate direction and manage the risks such as MBS Highway, Rate Alert, MBS Live, etc. While these services do a great job, their lock/float advice is not 100% accurate.
 
-When purchasing a house there is a time period between going under contract and closing. This is the time period when most loans need a hedging strategy so that the best rate can be locked. This time frame can be a couple weeks to up to 3 months. There are a variety of factors that contribute to the decision making.
+When purchasing a house there is a time period between going under contract and closing. This is the time period when most loans need a hedging strategy so that the best rate can be locked. Traditionally, this time frame can be a couple weeks to up to 3 months. There are a variety of factors that contribute to the decision making.
 
 This repository attempts to assist in the decision making. 
 
 
 ## Data Source
 
-In my opinion, we need enterprise level data from vendors such as Bloomberg, Thompson Reuters, or even proprietary data. to help create the machine learning models needed to assist our decision making. Nonetheless, this repo's attempt will utilize public data provided by the St. Louis Fed via their API. You will need your own API Key to run the queries needed for this project.
+In my opinion, we need data from vendors such as Bloomberg, Thompson Reuters, or even proprietary data to help create the machine learning models that have high scores needed to make proper decisions. Nonetheless, this repo's attempt will utilize public data provided by the St. Louis Fed via their API and Yahoo Finance. You will need your own FRED API Key to run the queries needed for this project.
 
     * FRED API => https://fredaccount.stlouisfed.org/login/secure/
 
@@ -23,7 +23,7 @@ In my opinion, we need enterprise level data from vendors such as Bloomberg, Tho
 
 Step 1:- Enter your FRED API Key in the `{data_source}` jupyter notebook and save notebook.
 
-Step 2:- Run the `{to_lock_or_to_float}` jupyter notebook. The 2nd cell will run the following jupyter notebooks:-
+Step 2:- Run the jupyter notebook for the selected machine learning model (prefixed with `ml_`). Each one of these notebooks have `%run x_y_variables.ipynb` to get the data needed for the ML models. The `x_y_variables.ipynb` notebook will run the following jupyter notebooks to pre-process the data.
 
     * data_source.ipynb
     * inflation.ipynb
