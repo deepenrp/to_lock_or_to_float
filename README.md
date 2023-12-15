@@ -1,5 +1,6 @@
-# to_lock_or_to_float
+# To Lock or To Float?
 
+![LockOrFloat](lock_float_image.png)
 
 ## Background
 
